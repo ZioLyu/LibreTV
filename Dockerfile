@@ -16,7 +16,7 @@ WORKDIR /app
 
 ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
-ENV PORT=8080
+ENV PORT=8081
 ENV HOSTNAME=0.0.0.0
 
 # 非 root 用户
@@ -28,5 +28,5 @@ COPY --from=builder /app/public ./public
 
 USER nextjs
 
-EXPOSE 8080
+EXPOSE 8081
 CMD ["node", "server.js"]
